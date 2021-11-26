@@ -1,0 +1,21 @@
+<instances xmlns="http://nestor.ais3p.bocp.ru" xmlns:er="http://nestor.ais3p.bocp.ru" xmlns:aggr="http://nestor.ais3p.bocp.ru" xmlns:segm="http://nestor.ais3p.bocp.ru" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://nestor.ais3p.bocp.ru xsd/instances.xsd">
+    <instance model="BaseKind" domain="ka">
+        <aggr:generic uid="35ecb08ca94c4b86a3a00bac7607813c" etype="ka.Kind" owner="00000000000000000000000000000000" from="2021-10-15T08:16:35.056000+00:00">
+            <attr name="name" uid="d1a8fd97983d432fa974b7545d6aaa17" owner="00000000000000000000000000000000" via="fact.001-ka.kind.has-name" isMany="false" reversed="false" reference="false" required="true" readonly="false">
+                <segm:string uid="d1a8fd97983d432fa974b7545d6aaa17" etype="str" owner="00000000000000000000000000000000" from="2021-10-15T08:16:35.056000+00:00">
+                    <value owner="00000000000000000000000000000000" from="2021-10-15T08:16:35.056000+00:00">Проект</value>
+                </segm:string>
+            </attr>
+            <attr name="number_template" uid="ad6399c64c9540bf8a7b18aa4dfd962c" owner="00000000000000000000000000000000" via="ka.has-number-template" isMany="false" reversed="false" reference="false" required="true" readonly="false">
+                <segm:string uid="ad6399c64c9540bf8a7b18aa4dfd962c" etype="str" owner="00000000000000000000000000000000" from="2021-10-15T08:16:35.057000+00:00">
+                    <value owner="00000000000000000000000000000000" from="2021-10-15T08:16:35.057000+00:00">П/{sequence}</value>
+                </segm:string>
+            </attr>
+            <attr name="origin_number_template" uid="790ed1de42ca4f898a46212ba2db12a5" owner="00000000000000000000000000000000" via="ka.has-number-template-origin" isMany="false" reversed="false" reference="false" required="false" readonly="false">
+                <segm:string uid="790ed1de42ca4f898a46212ba2db12a5" etype="str" owner="00000000000000000000000000000000" from="2021-10-15T08:16:35.057000+00:00">
+                    <value owner="00000000000000000000000000000000" from="2021-10-15T08:16:35.057000+00:00" />
+                </segm:string>
+            </attr>
+        </aggr:generic>
+    </instance>
+</instances>
