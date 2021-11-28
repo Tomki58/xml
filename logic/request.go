@@ -5,7 +5,7 @@ import (
 	mxml "myxml/models/xml"
 )
 
-func New(instance mxml.Instance) medge.InsertQuery {
+func CreateInsertRequest(instance mxml.Instance) (*medge.InsertQuery, error) {
 	var query medge.InsertQuery
 
 	query.Domain = instance.Domain
@@ -19,16 +19,28 @@ func New(instance mxml.Instance) medge.InsertQuery {
 		}
 
 		for _, attr := range generic.Attrs {
+			value, err := GetValue(attr)
+			if err != nil {
+				return nil, err
+			}
 			query.Properties = append(query.Properties, medge.Property{
-				Value:      GetValue(attr),
-				Annotation: createAnnotation(attr),
+				Name:  attr.Name,
+				Value: value,
 			})
 		}
 	}
 
-	return query
+	return &query, nil
 }
 
-func createAnnotation(attr mxml.Attr) string {
-	return ""
+func CreateSelectRequest(instance mxml.Instance) medge.SelectQuery {
+	var query medge.SelectQuery
+
+	query.Domain = instance.Domain
+	query.Name = instance.Name
+	for _, generic := range instance.Generics {
+		query.UID = generic.UID
+	}
+
+	return query
 }

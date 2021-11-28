@@ -2,11 +2,12 @@ package main
 
 import (
 	"encoding/xml"
+	"fmt"
 	"log"
 	"os"
 
 	"myxml/logic"
-	m "myxml/models/xml"
+	mxml "myxml/models/xml"
 )
 
 func readXml(path string) ([]byte, error) {
@@ -19,14 +20,25 @@ func readXml(path string) ([]byte, error) {
 }
 
 func main() {
-	d, err := readXml("/home/argabidullin/nestorclient/instances/BaseKind.xml")
+	data, err := readXml("./instances/AttrWithValues.xml")
 	if err != nil {
 		log.Fatal(err)
 	}
 
-	var instances m.Instances
-	xml.Unmarshal(d, &instances)
+	var instances mxml.Instances
+	if err := xml.Unmarshal(data, &instances); err != nil {
+		log.Fatal(err)
+	}
 
-	query := logic.New(instances.Instances)
-	log.Print(query)
+	query, err := logic.CreateInsertRequest(instances.Instances)
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	repr, err := query.ToDDL()
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	fmt.Print(repr)
 }

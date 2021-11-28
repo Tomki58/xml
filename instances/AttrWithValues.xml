@@ -1,1 +1,41 @@
-<instances xmlns="http://nestor.ais3p.bocp.ru" xmlns:er="http://nestor.ais3p.bocp.ru" xmlns:aggr="http://nestor.ais3p.bocp.ru" xmlns:segm="http://nestor.ais3p.bocp.ru" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://nestor.ais3p.bocp.ru xsd/instances.xsd"><instance model="AttrValue" domain="ka"><aggr:generic uid="79caa1e3197c46a1a5180226bc7ac8ff" etype="ka.Value" owner="00000000000000000000000000000000" from="2021-11-01T08:20:09.964000+00:00"><attr name="attr" uid="81cb6fcf84894c16937f789c40e5a89c" owner="00000000000000000000000000000000" via="for-attr" isMany="false" reversed="false" reference="true" required="true" readonly="true"><instance model="Attribute" domain="ka"><aggr:generic uid="81cb6fcf84894c16937f789c40e5a89c" etype="ka.Attribute" owner="00000000000000000000000000000000" from="2021-11-01T08:05:39.392000+00:00"><attr name="name" uid="540d314d53d7462e86418f4112697634" owner="00000000000000000000000000000000" via="fact.001-ka.attr.has-name" isMany="false" reversed="false" reference="false" required="true" readonly="false"><segm:string uid="540d314d53d7462e86418f4112697634" etype="str" owner="00000000000000000000000000000000" from="2021-11-01T08:05:39.392000+00:00"><value owner="00000000000000000000000000000000" from="2021-11-01T08:05:39.392000+00:00">ID проекта КРЭТ</value></segm:string></attr><attr name="type_" uid="d5ebe451da62492fbd8fe55da832cdf7" owner="00000000000000000000000000000000" via="fact.001-ka.attr.has-type" isMany="false" reversed="false" reference="false" required="true" readonly="false"><segm:string uid="d5ebe451da62492fbd8fe55da832cdf7" etype="str" owner="00000000000000000000000000000000" from="2021-11-01T08:05:39.392000+00:00"><value owner="00000000000000000000000000000000" from="2021-11-01T08:05:39.392000+00:00">string</value></segm:string></attr><attr name="required" uid="ec3d0fc06ddf4ca19c723d57bff57be4" owner="00000000000000000000000000000000" via="fact.001-ka.attr.is-required" isMany="false" reversed="false" reference="false" required="true" readonly="false"><segm:boolean uid="ec3d0fc06ddf4ca19c723d57bff57be4" etype="bool" owner="00000000000000000000000000000000" from="2021-11-01T08:05:39.392000+00:00"><value owner="00000000000000000000000000000000" from="2021-11-01T08:05:39.392000+00:00">True</value></segm:boolean></attr><attr name="is_readonly" uid="afdc9db0a18846a1aa45a6465dcd26de" owner="00000000000000000000000000000000" via="ka.attr.is-readonly" isMany="false" reversed="false" reference="false" required="true" readonly="false"><segm:boolean uid="afdc9db0a18846a1aa45a6465dcd26de" etype="bool" owner="00000000000000000000000000000000" from="2021-11-01T08:05:39.392000+00:00"><value owner="00000000000000000000000000000000" from="2021-11-01T08:05:39.392000+00:00">True</value></segm:boolean></attr></aggr:generic></instance></attr><attr name="fact" uid="985a295916b74a9da8ac3b3dad51d443" owner="00000000000000000000000000000000" via="fact" isMany="false" reversed="false" reference="true" required="true" readonly="true"><aggr:generic uid="985a295916b74a9da8ac3b3dad51d443" etype="str" owner="00000000000000000000000000000000" from="2021-11-01T08:20:09.964000+00:00"><value owner="00000000000000000000000000000000" from="2021-11-01T08:20:09.964000+00:00">Проект КРЭТ</value></aggr:generic></attr></aggr:generic></instance></instances>
+<instances xmlns="http://nestor.ais3p.bocp.ru"
+    xmlns:er="http://nestor.ais3p.bocp.ru"
+    xmlns:aggr="http://nestor.ais3p.bocp.ru"
+    xmlns:segm="http://nestor.ais3p.bocp.ru"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://nestor.ais3p.bocp.ru xsd/instances.xsd">
+    <instance model="AttrValue" domain="ka">
+        <aggr:generic uid="79caa1e3197c46a1a5180226bc7ac8ff" etype="ka.Value" owner="00000000000000000000000000000000" from="2021-11-01T08:20:09.964000+00:00">
+            <attr name="attr" uid="81cb6fcf84894c16937f789c40e5a89c" owner="00000000000000000000000000000000" via="for-attr" isMany="false" reversed="false" reference="true" required="true" readonly="true">
+                <instance model="Attribute" domain="ka">
+                    <aggr:generic uid="81cb6fcf84894c16937f789c40e5a89c" etype="ka.Attribute" owner="00000000000000000000000000000000" from="2021-11-01T08:05:39.392000+00:00">
+                        <attr name="name" uid="540d314d53d7462e86418f4112697634" owner="00000000000000000000000000000000" via="fact.001-ka.attr.has-name" isMany="false" reversed="false" reference="false" required="true" readonly="false">
+                            <segm:string uid="540d314d53d7462e86418f4112697634" etype="str" owner="00000000000000000000000000000000" from="2021-11-01T08:05:39.392000+00:00">
+                                <value owner="00000000000000000000000000000000" from="2021-11-01T08:05:39.392000+00:00">ID проекта КРЭТ</value>
+                            </segm:string>
+                        </attr>
+                        <attr name="type_" uid="d5ebe451da62492fbd8fe55da832cdf7" owner="00000000000000000000000000000000" via="fact.001-ka.attr.has-type" isMany="false" reversed="false" reference="false" required="true" readonly="false">
+                            <segm:string uid="d5ebe451da62492fbd8fe55da832cdf7" etype="str" owner="00000000000000000000000000000000" from="2021-11-01T08:05:39.392000+00:00">
+                                <value owner="00000000000000000000000000000000" from="2021-11-01T08:05:39.392000+00:00">string</value>
+                            </segm:string>
+                        </attr>
+                        <attr name="required" uid="ec3d0fc06ddf4ca19c723d57bff57be4" owner="00000000000000000000000000000000" via="fact.001-ka.attr.is-required" isMany="false" reversed="false" reference="false" required="true" readonly="false">
+                            <segm:boolean uid="ec3d0fc06ddf4ca19c723d57bff57be4" etype="bool" owner="00000000000000000000000000000000" from="2021-11-01T08:05:39.392000+00:00">
+                                <value owner="00000000000000000000000000000000" from="2021-11-01T08:05:39.392000+00:00">True</value>
+                            </segm:boolean>
+                        </attr>
+                        <attr name="is_readonly" uid="afdc9db0a18846a1aa45a6465dcd26de" owner="00000000000000000000000000000000" via="ka.attr.is-readonly" isMany="false" reversed="false" reference="false" required="true" readonly="false">
+                            <segm:boolean uid="afdc9db0a18846a1aa45a6465dcd26de" etype="bool" owner="00000000000000000000000000000000" from="2021-11-01T08:05:39.392000+00:00">
+                                <value owner="00000000000000000000000000000000" from="2021-11-01T08:05:39.392000+00:00">True</value>
+                            </segm:boolean>
+                        </attr>
+                    </aggr:generic>
+                </instance>
+            </attr>
+            <attr name="fact" uid="985a295916b74a9da8ac3b3dad51d443" owner="00000000000000000000000000000000" via="fact" isMany="false" reversed="false" reference="true" required="true" readonly="true">
+                <aggr:generic uid="985a295916b74a9da8ac3b3dad51d443" etype="str" owner="00000000000000000000000000000000" from="2021-11-01T08:20:09.964000+00:00">
+                    <value owner="00000000000000000000000000000000" from="2021-11-01T08:20:09.964000+00:00">Проект КРЭТ</value>
+                </aggr:generic>
+            </attr>
+        </aggr:generic>
+    </instance>
+</instances>
